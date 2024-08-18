@@ -45,4 +45,4 @@ code {
 ul {
   padding-inline-start: 20px;
 }
-
+.avatar { border-radius: 50%; height: 90px; }

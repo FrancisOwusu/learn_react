@@ -1,4 +1,5 @@
 import Gallery from "./Gallery";
+import Profile from "./Profile";
 
 function MyButton() {
   return (
@@ -13,6 +14,7 @@ export default function MyApp() {
   return (
     <div>
       <h1>Welcome to my app</h1>
+      <Profile />
       <Gallery />
       <MyButton />
     </div>

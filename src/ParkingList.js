@@ -1,14 +1,17 @@
 function Item({ name, isPacked }) {
-    if(isPacked){
-        //if you dont want to re
-       // return null;
-        // return <li className="item">{name} ✔</li>;
-        //use of DRY
-        return <li className="item">{isPacked?name + ' ✔' :name}</li>
-    }
+  //use of DRY
+  //return <li className="item">{isPacked ? name + " ✔" : name}</li>;
+  //Now let’s say you want to wrap the completed item’s text into another HTML tag
+  return <li className="item">{isPacked ? <del>{name + " ✔"}</del> : name}</li>;
+}
+function Item1({ name, isPacked }) {
+  if (isPacked) {
+    //if you dont want to re
+    // return null;
+    return <li className="item">{name} ✔</li>;
+  }
   return <li className="item">{name}</li>;
 }
-
 export default function PackingList() {
   return (
     <section>

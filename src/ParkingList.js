@@ -1,8 +1,10 @@
 function Item({ name, isPacked }) {
     if(isPacked){
         //if you dont want to re
-        return null;
+       // return null;
         // return <li className="item">{name} ✔</li>;
+        //use of DRY
+        return <li className="item">{isPacked?name + ' ✔' :name}</li>
     }
   return <li className="item">{name}</li>;
 }

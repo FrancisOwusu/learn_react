@@ -1,4 +1,9 @@
 function Item({ name, isPacked }) {
+    if(isPacked){
+        //if you dont want to re
+        return null;
+        // return <li className="item">{name} ✔</li>;
+    }
   return <li className="item">{name}</li>;
 }
 

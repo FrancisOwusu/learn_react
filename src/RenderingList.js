@@ -15,17 +15,62 @@ export default function ItemList() {
   return listItem;
 }*/
 export default function ItemList() {
-  const chemist = people.filter((person) => person.profession === "chemist");
-  const listItems = chemist.map((person) => (
-    <li>
+  const chemists = people.filter((person) => person.profession === "chemist");
+  
+  const everyoneElse = people.filter(person =>
+    person.profession !== 'chemist'
+  );
+  
+  const listItems = chemists.map((person) => (
+    <li key={person.id}>
       <img src={getImageUrl(person)} alt={person.name} />
       <p>
         <b>{person.name}:</b>
-        {' ' + person.profession + ' '}
+        {" " + person.profession + " "}
         known for {person.accomplishment}
       </p>
     </li>
   ));
 
-  return <ul>{listItems}</ul>;
+//   return <ul>{listItems}</ul>;
+
+  return (
+    <article>
+      <h1>Scientists</h1>
+      <h2>Chemists</h2>
+      <ul>
+        {chemists.map(person =>
+          <li key={person.id}>
+            <img
+              src={getImageUrl(person)}
+              alt={person.name}
+            />
+            <p>
+              <b>{person.name}:</b>
+              {' ' + person.profession + ' '}
+              known for {person.accomplishment}
+            </p>
+          </li>
+        )}
+      </ul>
+      <h2>Everyone Else</h2>
+      <ul>
+        {everyoneElse.map(person =>
+          <li key={person.id}>
+            <img
+              src={getImageUrl(person)}
+              alt={person.name}
+            />
+            <p>
+              <b>{person.name}:</b>
+              {' ' + person.profession + ' '}
+              known for {person.accomplishment}
+            </p>
+          </li>
+        )}
+      </ul>
+    </article>
+  );
+
+
 }

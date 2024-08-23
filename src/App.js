@@ -5,6 +5,7 @@ import TodoList from "./TodoList";
 import SecondProfile from "./SecondProfile";
 import Avatar from "./Avatar";
 import PackingList from './ParkingList';
+import ItemList from './RenderingList';
 
 
 function MyButton() {
@@ -71,6 +72,9 @@ export default function MyApp() {
       {/* Color management */}
      <PackingList />
      <DrinkList />
+     <h3>Item List</h3>
+     {/* Rendering list */}
+     <ItemList />
     </div>
   );
 }

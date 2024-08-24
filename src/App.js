@@ -7,6 +7,7 @@ import Avatar from "./Avatar";
 import PackingList from './ParkingList';
 import ItemList from './RenderingList';
 import RecipeList from './RecipeList';
+import Button from './Button';
 
 
 function MyButton() {
@@ -77,6 +78,7 @@ export default function MyApp() {
      {/* Rendering list */}
      <ItemList />
      <RecipeList />
+     <Button />
     </div>
   );
 }

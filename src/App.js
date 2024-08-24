@@ -8,6 +8,7 @@ import PackingList from './ParkingList';
 import ItemList from './RenderingList';
 import RecipeList from './RecipeList';
 import Button from './Button';
+import ToolbarToolbar from './Toolbar';
 
 
 function MyButton() {
@@ -79,6 +80,7 @@ export default function MyApp() {
      <ItemList />
      <RecipeList />
      <Button />
+     <ToolbarToolbar />
     </div>
   );
 }

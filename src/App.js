@@ -6,6 +6,8 @@ import SecondProfile from "./SecondProfile";
 import Avatar from "./Avatar";
 import PackingList from './ParkingList';
 import ItemList from './RenderingList';
+import RecipeList from './RecipeList';
+import Button from './Button';
 
 
 function MyButton() {
@@ -75,6 +77,9 @@ export default function MyApp() {
      <h3>Item List</h3>
      {/* Rendering list */}
      <ItemList />
+     <RecipeList />
+     <Button />
     </div>
   );
 }
+

@@ -4,6 +4,8 @@ import Profile from "./Profile";
 import TodoList from "./TodoList";
 import SecondProfile from "./SecondProfile";
 import Avatar from "./Avatar";
+import PackingList from './ParkingList';
+import ItemList from './RenderingList';
 
 
 function MyButton() {
@@ -22,6 +24,31 @@ function useTime() {
     return () => clearInterval(id);
   }, []);
   return time;
+}
+
+function Drink({ name }) {
+  return (
+    <section>
+      <h1>{name}</h1>
+      <dl>
+        <dt>Part of plant</dt>
+        <dd>{name === 'tea' ? 'leaf' : 'bean'}</dd>
+        <dt>Caffeine content</dt>
+        <dd>{name === 'tea' ? '15–70 mg/cup' : '80–185 mg/cup'}</dd>
+        <dt>Age</dt>
+        <dd>{name === 'tea' ? '4,000+ years' : '1,000+ years'}</dd>
+      </dl>
+    </section>
+  );
+}
+
+ function DrinkList() {
+  return (
+    <div>
+      <Drink name="tea" />
+      <Drink name="coffee" />
+    </div>
+  );
 }
 export default function MyApp() {
  return (
@@ -43,7 +70,11 @@ export default function MyApp() {
       </Card>
       <TodoList />
       {/* Color management */}
-     
+     <PackingList />
+     <DrinkList />
+     <h3>Item List</h3>
+     {/* Rendering list */}
+     <ItemList />
     </div>
   );
 }

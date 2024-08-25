@@ -10,6 +10,7 @@ import RecipeList from './RecipeList';
 import Button from './Button';
 import ToolbarToolbar from './Toolbar';
 import Signup from './FormSubmit';
+import Toolbar2 from './ToolBar2';
 
 
 function MyButton() {
@@ -83,6 +84,11 @@ export default function MyApp() {
      <Button />
      <ToolbarToolbar />
      <Signup />
+     <h3>Tool bar 2</h3>
+     <Toolbar2
+        onPlayMovie={() => alert('Playing!')}
+        onUploadImage={() => alert('Uploading!')}
+      />
     </div>
   );
 }

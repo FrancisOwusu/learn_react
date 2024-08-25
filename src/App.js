@@ -9,6 +9,7 @@ import ItemList from './RenderingList';
 import RecipeList from './RecipeList';
 import Button from './Button';
 import ToolbarToolbar from './Toolbar';
+import Signup from './FormSubmit';
 
 
 function MyButton() {
@@ -81,6 +82,7 @@ export default function MyApp() {
      <RecipeList />
      <Button />
      <ToolbarToolbar />
+     <Signup />
     </div>
   );
 }

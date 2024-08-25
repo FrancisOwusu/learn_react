@@ -6,6 +6,9 @@ function AlertButton({ message, children }) {
   );
 }
 
+function CustomButton({onSmash,children}){
+  return(<button onClick={onSmash}>{children}</button>);
+}
 
 
 export default function Button() {
@@ -15,6 +18,10 @@ export default function Button() {
 
   return (
     <>
+    {/* Custom buttons implementation */}
+    <CustomButton onSmash={()=>alert('Playing !!!')}>Play more</CustomButton>
+    <CustomButton onSmash={()=>alert('Uploading !!!')}>Upload Image</CustomButton>
+    
     <AlertButton message="Playing">Play Movie</AlertButton>
     <AlertButton message="Uploading">Upload Image</AlertButton>
     

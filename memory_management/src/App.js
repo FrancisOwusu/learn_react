@@ -5,15 +5,16 @@ import { useState } from "react";
 import Gallery from "./Gallery";
 import MovingDot from "./MovingDot";
 import FeedbackForm from "./FeedbackForm";
+import Form from "./Form";
 
 export default function App() {
   return (
     <div className="Page">
-    <h3>Using State In feedback form</h3>
-    
-    <FeedbackForm />
-
-    <h3>Using State In Gallery</h3>
+    <h3>Avoid redundant state</h3>
+    <Form />
+      <h3>Using State In feedback form</h3>
+      <FeedbackForm />
+      <h3>Using State In Gallery</h3>
       <Gallery />
       <Gallery />
       <h3>State Structure Example</h3>

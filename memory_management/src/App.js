@@ -6,6 +6,7 @@ import Gallery from "./Gallery";
 import MovingDot from "./MovingDot";
 import FeedbackForm from "./FeedbackForm";
 import Form from "./Form";
+import Menu from "./Menu";
 
 export default function App() {
   return (
@@ -19,6 +20,9 @@ export default function App() {
       <Gallery />
       <h3>State Structure Example</h3>
       <MovingDot />
+
+      <h3>Avoid duplication in state</h3>
+      <Menu />
     </div>
   );
   // const [index,setIndex] = useState(0);

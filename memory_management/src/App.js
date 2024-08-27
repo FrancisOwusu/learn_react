@@ -25,7 +25,7 @@ export default function App() {
       <h3>Avoid duplication in state</h3>
       <Menu />
       <h3>Avoid deeply nested state</h3>
-      <TravelPlan />
+      {/* <TravelPlan /> */}
     </div>
   );
   // const [index,setIndex] = useState(0);

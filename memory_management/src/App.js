@@ -7,6 +7,7 @@ import MovingDot from "./MovingDot";
 import FeedbackForm from "./FeedbackForm";
 import Form from "./Form";
 import Menu from "./Menu";
+import TravelPlan from "./TravelPlan";
 
 export default function App() {
   return (
@@ -23,6 +24,8 @@ export default function App() {
 
       <h3>Avoid duplication in state</h3>
       <Menu />
+      <h3>Avoid deeply nested state</h3>
+      <TravelPlan />
     </div>
   );
   // const [index,setIndex] = useState(0);

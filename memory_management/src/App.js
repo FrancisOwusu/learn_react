@@ -8,10 +8,12 @@ import FeedbackForm from "./FeedbackForm";
 import Form from "./Form";
 import Menu from "./Menu";
 import TravelPlan from "./TravelPlan";
+import AdvForm from "./AdvForm1";
 
 export default function App() {
   return (
     <div className="Page">
+    <AdvForm />
     <h3>Avoid redundant state</h3>
     <Form />
       <h3>Using State In feedback form</h3>
@@ -24,7 +26,7 @@ export default function App() {
 
       <h3>Avoid duplication in state</h3>
       <Menu />
-      <h3>Avoid deeply nested state</h3>
+      <h3>Avoid deeply nested state</h3> */}
       {/* <TravelPlan /> */}
     </div>
   );

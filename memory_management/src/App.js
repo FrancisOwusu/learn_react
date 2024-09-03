@@ -13,7 +13,6 @@ import AdvForm from "./AdvForm1";
 export default function App() {
   return (
     <div className="Page">
-    <AdvForm />
     <h3>Avoid redundant state</h3>
     <Form />
       <h3>Using State In feedback form</h3>

@@ -1,21 +1,21 @@
-import React, { useSate, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import Gallery from "./Gallery";
 import Profile from "./Profile";
 import TodoList from "./TodoList";
 import SecondProfile from "./SecondProfile";
 import Avatar from "./Avatar";
-import PackingList from './ParkingList';
-import ItemList from './RenderingList';
-import RecipeList from './RecipeList';
-import Button from './Button';
-import ToolbarToolbar from './Toolbar';
-import Signup from './FormSubmit';
-import Toolbar2 from './ToolBar2';
-import Picture from './Picture';
-import FilterableList from './FilterableList';
-import Accordion from './Accordion';
-import SyncedInputs from './SynchInput';
-
+import PackingList from "./ParkingList";
+import ItemList from "./RenderingList";
+import RecipeList from "./RecipeList";
+import Button from "./Button";
+import ToolbarToolbar from "./Toolbar";
+import Signup from "./FormSubmit";
+import Toolbar2 from "./ToolBar2";
+import Picture from "./Picture";
+import FilterableList from "./FilterableList";
+import Accordion from "./Accordion";
+import SyncedInputs from "./SynchInput";
+import DisplayCounter from "./DisplayCounter";
 
 function MyButton() {
   return <button>I'm a button</button>;
@@ -41,17 +41,17 @@ function Drink({ name }) {
       <h1>{name}</h1>
       <dl>
         <dt>Part of plant</dt>
-        <dd>{name === 'tea' ? 'leaf' : 'bean'}</dd>
+        <dd>{name === "tea" ? "leaf" : "bean"}</dd>
         <dt>Caffeine content</dt>
-        <dd>{name === 'tea' ? '15–70 mg/cup' : '80–185 mg/cup'}</dd>
+        <dd>{name === "tea" ? "15–70 mg/cup" : "80–185 mg/cup"}</dd>
         <dt>Age</dt>
-        <dd>{name === 'tea' ? '4,000+ years' : '1,000+ years'}</dd>
+        <dd>{name === "tea" ? "4,000+ years" : "1,000+ years"}</dd>
       </dl>
     </section>
   );
 }
 
- function DrinkList() {
+function DrinkList() {
   return (
     <div>
       <Drink name="tea" />
@@ -59,8 +59,13 @@ function Drink({ name }) {
     </div>
   );
 }
+
 export default function MyApp() {
- return (
+  //add counter
+  const [showB, setShowB] = useState(true);
+  const counter = <DisplayCounter />;
+ 
+  return (
     <div>
       <h1>Welcome to my app</h1>
       <h3>First Profile</h3>
@@ -79,25 +84,39 @@ export default function MyApp() {
       </Card>
       <TodoList /> */}
       {/* Color management */}
-     {/* <PackingList />
+      {/* <PackingList />
      <DrinkList />
      <h3>Item List</h3> */}
-     {/* Rendering list */}
-     {/* <ItemList />
+      {/* Rendering list */}
+      {/* <ItemList />
      <RecipeList />
      <Button />
      <ToolbarToolbar />
      <Signup /> */}
-     <h3>Tool bar 2</h3>
-     <Toolbar2
-        onPlayMovie={() => alert('Playing!')}
-        onUploadImage={() => alert('Uploading!')}
+      <h3>Tool bar 2</h3>
+      <Toolbar2
+        onPlayMovie={() => alert("Playing!")}
+        onUploadImage={() => alert("Uploading!")}
       />
       <Picture />
       <FilterableList />
       <Accordion />
       <SyncedInputs />
+
+      <h3>Display Counter</h3>
+      <DisplayCounter />
+
+      {showB && <DisplayCounter />}
+      <label>
+        <input
+          type="checkbox"
+          checked={showB}
+          onChange={(e) => {
+            setShowB(e.target.checked);
+          }}
+        />
+        Render the second counter
+      </label>
     </div>
   );
 }
-

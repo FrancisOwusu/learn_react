@@ -11,6 +11,10 @@ import Button from './Button';
 import ToolbarToolbar from './Toolbar';
 import Signup from './FormSubmit';
 import Toolbar2 from './ToolBar2';
+import Picture from './Picture';
+import FilterableList from './FilterableList';
+import Accordion from './Accordion';
+import SyncedInputs from './SynchInput';
 
 
 function MyButton() {
@@ -67,28 +71,32 @@ export default function MyApp() {
       <Gallery />
       {/* <MyButton /> */}
       <h3>Show Card</h3>
-      <Card>
+      {/* <Card>
         <Avatar
           size={100}
           person={{ name: "Katsuko Saruhasi", imageId: "Yfe)qp2" }}
         />
       </Card>
-      <TodoList />
+      <TodoList /> */}
       {/* Color management */}
-     <PackingList />
+     {/* <PackingList />
      <DrinkList />
-     <h3>Item List</h3>
+     <h3>Item List</h3> */}
      {/* Rendering list */}
-     <ItemList />
+     {/* <ItemList />
      <RecipeList />
      <Button />
      <ToolbarToolbar />
-     <Signup />
+     <Signup /> */}
      <h3>Tool bar 2</h3>
      <Toolbar2
         onPlayMovie={() => alert('Playing!')}
         onUploadImage={() => alert('Uploading!')}
       />
+      <Picture />
+      <FilterableList />
+      <Accordion />
+      <SyncedInputs />
     </div>
   );
 }

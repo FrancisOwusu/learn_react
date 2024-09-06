@@ -17,7 +17,8 @@ import Accordion from "./Accordion";
 import SyncedInputs from "./SynchInput";
 import DisplayCounter from "./DisplayCounter";
 import DisplayCounter2 from "./DisplayCounter2";
-
+import DisplayCounter3 from "./DisplayCounter3";
+import DisplayCounter4 from "./DisplayCounter4";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -65,7 +66,7 @@ export default function MyApp() {
   //add counter
   const [showB, setShowB] = useState(true);
   const counter = <DisplayCounter />;
- 
+
   return (
     <div>
       <h1>Welcome to my app</h1>
@@ -119,8 +120,14 @@ export default function MyApp() {
         Render the second counter
       </label>
 
-      <h3>Display Counter 3</h3>
+      <h3>Display Counter 2</h3>
       <DisplayCounter2 />
+
+      <h3>Display Counter 3</h3>
+      <DisplayCounter3 />
+
+      <h3>Display Counter 4</h3>
+      <DisplayCounter4 />
     </div>
   );
 }

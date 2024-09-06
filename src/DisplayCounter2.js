@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function DisplayCounter2() {
   const [isFancy, setIsFancy] = useState(false);
@@ -10,8 +10,8 @@ export default function DisplayCounter2() {
           <input
             type="checkbox"
             checked={isFancy}
-            onChange={e => {
-              setIsFancy(e.target.checked)
+            onChange={(e) => {
+              setIsFancy(e.target.checked);
             }}
           />
           Use fancy styling
@@ -26,8 +26,8 @@ export default function DisplayCounter2() {
         <input
           type="checkbox"
           checked={isFancy}
-          onChange={e => {
-            setIsFancy(e.target.checked)
+          onChange={(e) => {
+            setIsFancy(e.target.checked);
           }}
         />
         Use fancy styling
@@ -40,12 +40,12 @@ function Counter({ isFancy }) {
   const [score, setScore] = useState(0);
   const [hover, setHover] = useState(false);
 
-  let className = 'counter';
+  let className = "counter";
   if (hover) {
-    className += ' hover';
+    className += " hover";
   }
   if (isFancy) {
-    className += ' fancy';
+    className += " fancy";
   }
 
   return (
@@ -55,9 +55,7 @@ function Counter({ isFancy }) {
       onPointerLeave={() => setHover(false)}
     >
       <h1>{score}</h1>
-      <button onClick={() => setScore(score + 1)}>
-        Add one
-      </button>
+      <button onClick={() => setScore(score + 1)}>Add one</button>
     </div>
   );
 }

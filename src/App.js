@@ -16,6 +16,7 @@ import FilterableList from "./FilterableList";
 import Accordion from "./Accordion";
 import SyncedInputs from "./SynchInput";
 import DisplayCounter from "./DisplayCounter";
+import DisplayCounter2 from "./DisplayCounter2";
 
 function MyButton() {
   return <button>I'm a button</button>;
@@ -117,6 +118,9 @@ export default function MyApp() {
         />
         Render the second counter
       </label>
+
+      <h3>Display Counter 3</h3>
+      <DisplayCounter2 />
     </div>
   );
 }

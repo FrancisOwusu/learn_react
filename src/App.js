@@ -19,6 +19,7 @@ import DisplayCounter from "./DisplayCounter";
 import DisplayCounter2 from "./DisplayCounter2";
 import DisplayCounter3 from "./DisplayCounter3";
 import DisplayCounter4 from "./DisplayCounter4";
+import Scoreboard from "./ScoreBoard";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -128,6 +129,9 @@ export default function MyApp() {
 
       <h3>Display Counter 4</h3>
       <DisplayCounter4 />
+
+      <h3>Display Scoreboard</h3>
+      <Scoreboard />
     </div>
   );
 }

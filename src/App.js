@@ -20,7 +20,6 @@ import DisplayCounter2 from "./DisplayCounter2";
 import DisplayCounter3 from "./DisplayCounter3";
 import DisplayCounter4 from "./DisplayCounter4";
 import Scoreboard from "./ScoreBoard";
-import Messenger from "./chat_project/Messenger";
 import ContactList from "./chat_project/ContactList";
 import { contacts } from "./chat_project/contacts";
 import Chat from "./chat_project/Chat";

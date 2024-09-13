@@ -24,6 +24,8 @@ import ContactList from "./chat_project/ContactList";
 import { contacts } from "./chat_project/contacts";
 import Chat from "./chat_project/Chat";
 import TaskApp from "./TaskApp";
+import TaskApp1 from "./taskAppWithReducer";
+import TaskAppWithImmerReducer from "./TaskAppWithImmerReducer.js";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -147,6 +149,10 @@ export default function MyApp() {
       <Chat contact={to} />
       <h3>Task App</h3>
       <TaskApp />
+      <h3>Task App With Reducer</h3>
+      <TaskApp1 />
+      <h3>Task App With Immer Reducer</h3>
+     <TaskAppWithImmerReducer />
     </div>
   );
 }

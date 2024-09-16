@@ -24,6 +24,7 @@ import ContactList from "./chat_project/ContactList";
 import { contacts } from "./chat_project/contacts";
 import Chat from "./chat_project/Chat";
 import ContextPage from "./ContextPage";
+import ProfilePage from "./ProfilePage";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -147,6 +148,7 @@ export default function MyApp() {
       <Chat contact={to} />
       <h2>Using Context to replace state</h2>
     <ContextPage />
+    <ProfilePage />
     </div>
   );
 }

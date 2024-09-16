@@ -1,19 +1,17 @@
-export default function Profile(){
-    return(
-        <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    />)
-    }
 
+function Avatar() {
+  return (
+    <img
+      className="avatar"
+      src="https://i.imgur.com/1bX5QH6.jpg"
+      alt="Lin Lanying"
+      width={100}
+      height={100}
+    />
+  );
+}
+export default function Profile() {
 
-// export default function Gallery() {
-//     return (
-//       <section>
-//         <h1>Amazing scientists</h1>
-//         <Profile />
-//         <Profile />
-//         <Profile />
-//       </section>
-//     );
-//   }
+  return (<Avatar person={{name:'Francis Osei Owusu',imageId:'1bX5QH6'}} size={100}/>)
+
+}

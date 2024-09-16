@@ -70,11 +70,10 @@ export default function MyApp() {
   //add counter
   const [showB, setShowB] = useState(true);
   const counter = <DisplayCounter />;
-  const [to,setTo] = useState(contacts[0])
-console.log(contacts[0])
+  const [to, setTo] = useState(contacts[0]);
+  console.log(contacts[0]);
   return (
     <div>
-
       <h1>Welcome to my app</h1>
       <h3>First Profile</h3>
       <Profile />
@@ -138,17 +137,13 @@ console.log(contacts[0])
       <h3>Display Scoreboard</h3>
       <Scoreboard />
       <br />
-<h3>Preserving and resetting state </h3>
+      <h3>Preserving and resetting state </h3>
       <ContactList
         contacts={contacts}
         selectedContact={to}
-        onSelect={contact => setTo(contact)}
+        onSelect={(contact) => setTo(contact)}
       />
       <Chat contact={to} />
-  
-
-     
-
     </div>
   );
 }

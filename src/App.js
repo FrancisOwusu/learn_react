@@ -144,6 +144,8 @@ export default function MyApp() {
         onSelect={(contact) => setTo(contact)}
       />
       <Chat contact={to} />
+      <h2>Using Context to replace state</h2>
+    <ContextPage />
     </div>
   );
 }

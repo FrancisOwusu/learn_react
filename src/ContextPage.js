@@ -1,25 +1,25 @@
-import Heading from './context/Heading';
-import Section from './context/Section';
+import Heading from "./context/Heading";
+import Section from "./context/Section";
 
-export default function Page() {
+export default function ContextPage() {
   return (
     <Section>
-      <Heading level={1}>Title</Heading>
+    <Heading>Title</Heading>
+    <Section>
+      <Heading>Heading</Heading>
+      <Heading>Heading</Heading>
+      <Heading>Heading</Heading>
       <Section>
-        <Heading level={2}>Heading</Heading>
-        <Heading level={2}>Heading</Heading>
-        <Heading level={2}>Heading</Heading>
+        <Heading>Sub-heading</Heading>
+        <Heading>Sub-heading</Heading>
+        <Heading>Sub-heading</Heading>
         <Section>
-          <Heading level={3}>Sub-heading</Heading>
-          <Heading level={3}>Sub-heading</Heading>
-          <Heading level={3}>Sub-heading</Heading>
-          <Section>
-            <Heading level={4}>Sub-sub-heading</Heading>
-            <Heading level={4}>Sub-sub-heading</Heading>
-            <Heading level={4}>Sub-sub-heading</Heading>
-          </Section>
+          <Heading>Sub-sub-heading</Heading>
+          <Heading>Sub-sub-heading</Heading>
+          <Heading>Sub-sub-heading</Heading>
         </Section>
       </Section>
     </Section>
+  </Section>
   );
 }

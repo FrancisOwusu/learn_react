@@ -23,6 +23,7 @@ import Scoreboard from "./ScoreBoard";
 import ContactList from "./chat_project/ContactList";
 import { contacts } from "./chat_project/contacts";
 import Chat from "./chat_project/Chat";
+import ContextPage from "./ContextPage";
 function MyButton() {
   return <button>I'm a button</button>;
 }

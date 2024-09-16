@@ -1,5 +1,10 @@
-export default function Section({children}){
-    <section className="section">
+import { LevelContext } from "./LevelContext";
+export default function Section({level, children }) {
+    return (
+      <section className="section">
+      <LevelContext.Provider value={level + 1}>
         {children}
-    </section>
-}
+        </LevelContext.Provider>
+      </section>
+    );
+  }

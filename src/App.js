@@ -28,6 +28,7 @@ import ProfilePage from "./ProfilePage";
 import Counter from "./escape_hatches/Counter";
 import StopWatch from "./escape_hatches/StopWatch";
 import RefForm from "./escape_hatches/RefForm";
+import CatFriends from "./escape_hatches/CatFriends";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -160,6 +161,8 @@ export default function MyApp() {
 
     <h3>Use refs in form</h3>
     <RefForm />
+    <h3>Use refs in scrollIntoView</h3>
+    <CatFriends />
     </div>
   );
 }

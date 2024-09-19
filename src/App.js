@@ -25,6 +25,8 @@ import { contacts } from "./chat_project/contacts";
 import Chat from "./chat_project/Chat";
 import ContextPage from "./ContextPage";
 import ProfilePage from "./ProfilePage";
+import Counter from "./escape_hatches/Counter";
+import StopWatch from "./escape_hatches/StopWatch";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -149,6 +151,11 @@ export default function MyApp() {
       <h2>Using Context to replace state</h2>
     <ContextPage />
     <ProfilePage />
+
+    <h3>Escape Hatches</h3>
+    <Counter />
+    <h3>Stop Watch</h3>
+    <StopWatch />
     </div>
   );
 }

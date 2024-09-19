@@ -27,6 +27,7 @@ import ContextPage from "./ContextPage";
 import ProfilePage from "./ProfilePage";
 import Counter from "./escape_hatches/Counter";
 import StopWatch from "./escape_hatches/StopWatch";
+import RefForm from "./escape_hatches/RefForm";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -156,6 +157,9 @@ export default function MyApp() {
     <Counter />
     <h3>Stop Watch</h3>
     <StopWatch />
+
+    <h3>Use refs in form</h3>
+    <RefForm />
     </div>
   );
 }

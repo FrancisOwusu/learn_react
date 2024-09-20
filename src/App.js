@@ -31,6 +31,8 @@ import RefForm from "./escape_hatches/RefForm";
 import CatFriends from "./escape_hatches/CatFriends";
 import CatFriendsWithList from "./escape_hatches/CartFriendWithList";
 import MyForm from "./escape_hatches/MyForm";
+import VideoPlayer from './escape_hatches/VideoPlayer';
+import VideoPlayer2 from "./escape_hatches/VideoPlayer2";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -79,13 +81,29 @@ export default function MyApp() {
   const [showB, setShowB] = useState(true);
   const counter = <DisplayCounter />;
   const [to, setTo] = useState(contacts[0]);
-  console.log(contacts[0]);
+  const [isPlaying, setIsPlyaing] = useState(false);
+  const [text, setText] = useState('');
+  
   return (
     <div>
+      <h3>Video Player1</h3>
+      <button onClick={() => setIsPlyaing(!isPlaying)}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
+      <VideoPlayer isPlaying={isPlaying} src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"/>
+      <h3>Video Player2</h3>
+<input value={text} onChange={(e)=>setText(e.target.value)} />
+<button onClick={()=>setIsPlyaing(!isPlaying)}>
+  {isPlaying?'Pause':'Play'}
+</button>
+<VideoPlayer
+        isPlaying={isPlaying}
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+      />
+
       <h1>Welcome to my app</h1>
       <h3>First Profile</h3>
       <Profile />
-
       <h3>Second Profile</h3>
       <SecondProfile />
       <Gallery />

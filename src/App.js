@@ -31,8 +31,9 @@ import RefForm from "./escape_hatches/RefForm";
 import CatFriends from "./escape_hatches/CatFriends";
 import CatFriendsWithList from "./escape_hatches/CartFriendWithList";
 import MyForm from "./escape_hatches/MyForm";
-import VideoPlayer from './escape_hatches/VideoPlayer';
+import VideoPlayer from "./escape_hatches/VideoPlayer";
 import VideoPlayer2 from "./escape_hatches/VideoPlayer2";
+import ChatRoom from "./useEffects/ChatRoom";
 function MyButton() {
   return <button>I'm a button</button>;
 }
@@ -82,21 +83,26 @@ export default function MyApp() {
   const counter = <DisplayCounter />;
   const [to, setTo] = useState(contacts[0]);
   const [isPlaying, setIsPlyaing] = useState(false);
-  const [text, setText] = useState('');
-  
+  const [text, setText] = useState("");
+
   return (
     <div>
+      <h3>Test Connection</h3>
+      <ChatRoom />
       <h3>Video Player1</h3>
       <button onClick={() => setIsPlyaing(!isPlaying)}>
         {isPlaying ? "Pause" : "Play"}
       </button>
-      <VideoPlayer isPlaying={isPlaying} src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"/>
+      <VideoPlayer
+        isPlaying={isPlaying}
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+      />
       <h3>Video Player2</h3>
-<input value={text} onChange={(e)=>setText(e.target.value)} />
-<button onClick={()=>setIsPlyaing(!isPlaying)}>
-  {isPlaying?'Pause':'Play'}
-</button>
-<VideoPlayer
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <button onClick={() => setIsPlyaing(!isPlaying)}>
+        {isPlaying ? "Pause" : "Play"}
+      </button>
+      <VideoPlayer
         isPlaying={isPlaying}
         src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
       />
